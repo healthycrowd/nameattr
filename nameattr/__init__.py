@@ -27,7 +27,7 @@ for find_type in _FIND_TYPES:
         _type_funcs.append(func_name)
 
         return {
-            f"_{matches_func_name}": matches_func,
+            matches_func_name: matches_func,
             func_name: func,
         }
 

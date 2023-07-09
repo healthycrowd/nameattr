@@ -1,25 +1,17 @@
-import string
+import re
 from collections import OrderedDict
 
 
-ALPHANUM_DICTIONARY = string.digits + string.ascii_letters
-NAME_DICTIONARY = ALPHANUM_DICTIONARY + "_."
-
-
 def word_starts_lower(value):
-    return is_name(value) and value[0] in string.ascii_lowercase
+    return is_name(value) and value[0].lower() == value[0]
 
 
 def word_starts_upper(value):
-    return is_name(value) and value[0] in string.ascii_uppercase
-
-
-def word_starts_alphanum(value):
-    return is_name(value) and value[0] in ALPHANUM_DICTIONARY
+    return is_name(value) and value[0].upper() == value[0]
 
 
 def is_name(value):
-    return len(value) > 1 and all(char in NAME_DICTIONARY for char in value)
+    return bool(re.match("^\\w+[_\\w]+$", value))
 
 
 class NameType:
