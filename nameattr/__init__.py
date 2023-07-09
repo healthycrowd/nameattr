@@ -1,4 +1,5 @@
 import importlib
+import nltk
 
 
 __version__ = "0.1.0"
@@ -35,3 +36,8 @@ for find_type in _FIND_TYPES:
 
 
 __all__ = tuple(_type_funcs)
+
+
+# This isn't great but needed until there's a better way to do this or nltk is replaced
+nltk.download("punkt")
+nltk.download("averaged_perceptron_tagger")
