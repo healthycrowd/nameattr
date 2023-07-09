@@ -2,7 +2,7 @@ import importlib
 import nltk
 
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 
 _FIND_TYPES = ("text",)
