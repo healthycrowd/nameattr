@@ -2,7 +2,7 @@ import pytest
 
 import nameattr
 from nameattr._match import NameMatches
-from .names import (
+from .name_data import (
     MONONYM,
     FULLNAME,
     FULLNAME_MIDDLE,
