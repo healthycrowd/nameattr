@@ -26,6 +26,7 @@ classifiers = [
 ]
 dependencies = [
     "nltk~=3.8",
+    "lxml~=4.9",
 ]
 
 [project.urls]

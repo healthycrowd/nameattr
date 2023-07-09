@@ -4,7 +4,7 @@ import importlib
 __version__ = "0.1.0"
 
 
-_FIND_TYPES = ("text",)
+_FIND_TYPES = ("text", "html", "url")
 _type_funcs = []
 
 
